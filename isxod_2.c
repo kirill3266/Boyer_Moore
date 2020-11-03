@@ -15,7 +15,7 @@ int strlen(char* str) {
 	return i;
 }
 
-void func(char* str, char* substr) {
+void boyerMoore(char* str, char* substr) {
 	int substrl = strlen(substr);
 	int d[256];
 	preBmBc(substr, substrl, d);
@@ -43,6 +43,6 @@ int main() {
 	char substr[1000];
 	fgets(substr, 1000, stdin);
 	printf("Vasha podstroka: %s\n", substr);
-	func(str, substr);
+	boyerMoore(str, substr);
 	return 0;
 }
